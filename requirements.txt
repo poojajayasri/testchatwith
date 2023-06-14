@@ -3,6 +3,5 @@ streamlit
 pypdf
 langchain
 openai
-tiktoken
 faiss-cpu
 docx2txt
