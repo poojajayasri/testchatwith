@@ -6,7 +6,7 @@ from langchain.vectorstores import FAISS
 import os
 
 
-api = os.environ.get("OPENAI_API_KEY)
+api = os.environ.get("OPENAI_API_KEY")
 embeddings = OpenAIEmbeddings(openai_api_key=api)
 uploaded_file = st.file_uploader("**Upload Your txt File**")
 if uploaded_file:
