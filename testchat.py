@@ -4,6 +4,7 @@ from langchain.document_loaders import Docx2txtLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 import os
+from langchain.document_loaders import PyPDFLoader
 
 
 api = os.environ.get("OPENAI_API_KEY")
@@ -25,13 +26,14 @@ if uploaded_file:
     st.download_button("Download PDF", data=uploaded_file, file_name=uploaded_file.name)
     lala =[]
 
-    loader = Docx2txtLoader(f"{file_path}")
+    loader = PyPDFLoader(f"{file_path}")
+    #loader = Docx2txtLoader(f"{file_path}")
+
     data = loader.load()
     #print(data)
     lala.extend(data)
     st.write(lala)
     """
-    from langchain.document_loaders import PyPDFLoader
 
     loader = PyPDFLoader("/Users/poojas/Downloads/BCG.pdf")
     pages = loader.load()
