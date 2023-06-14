@@ -29,6 +29,7 @@ if uploaded_file:
     data = loader.load()
     #print(data)
     lala.extend(data)
+    st.write(lala)
     """
     from langchain.document_loaders import PyPDFLoader
 
